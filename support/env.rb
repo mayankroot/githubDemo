@@ -1,14 +1,24 @@
 require 'rubygems'
 require 'cucumber'
 require 'watir'
-require 'selenium-webdriver'
-require 'webdriver-user-agent'
 
+class LoginVar
 
+  def login
+    $browser.text_field(name: 'email')
+  end
 
+  def password
+    $browser.text_field(name: 'pass')
+  end
+
+  def login_btn
+    $browser.button(name: 'login')
+  end
+
+end
 
 Before do
-  # driver = Webdriver::UserAgent.driver(:browser => :chrome, :agent => :desktop)
   $browser = Watir::Browser.new :chrome
 end
 

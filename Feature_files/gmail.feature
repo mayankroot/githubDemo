@@ -1,6 +1,7 @@
-Feature: verify gmail page
+Feature: verify facebook page
   @start
-  Scenario: verify user is able to launch gmail home page
-    Given I am on gmail home page
-    Then I should see and fill the login fields
+  Scenario: Verify user is able to launch facebook page
+    Given I am on facebook page
+    When I should see and fill the login fields
+    Then I should be able to login successfully
 

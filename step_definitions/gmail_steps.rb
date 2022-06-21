@@ -1,9 +1,13 @@
-Given(/^I am on gmail home page$/) do
-  $browser.goto "https://accounts.google.com/signin"
+sign_in = LoginVar.new
+Given(/^I am on facebook page$/) do
+  $browser.goto 'https://www.facebook.com/'
 end
 
-Then(/^I should see and fill the login fields$/) do
-  $browser.text_field(class: 'whsOnd zHQkBf').set 'testacc202122@gmail.com'
-  $browser.driver.find_element(xpath: "(//*[@type='button' and @jsname='LgbsSe'])[2]").click
-  sleep(3)
+When(/^I should see and fill the login fields$/) do
+  sign_in.login.set 'testacc202122@gmail.com'
+  sign_in.password.set 'Hello@123'
+end
+
+Then(/^I should be able to login successfully$/) do
+  sign_in.login_btn.click
 end
