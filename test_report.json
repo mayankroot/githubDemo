@@ -1,0 +1,163 @@
+[
+  {
+    "id": "verify-facebook-login-page",
+    "uri": "features/Feature_files/facebook.feature",
+    "keyword": "Feature",
+    "name": "verify facebook login page",
+    "description": "",
+    "line": 2,
+    "tags": [
+      {
+        "name": "@all",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "id": "verify-facebook-login-page;verify-user-is-able-to-launch-facebook-page",
+        "keyword": "Scenario",
+        "name": "Verify user is able to launch facebook page",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on facebook page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/facebook_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2447159000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter the correct login fields",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/facebook_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 430399000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should be able to login successfully",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/facebook_steps.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10098518000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2592246000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 311026000
+            }
+          }
+        ]
+      },
+      {
+        "id": "verify-facebook-login-page;verify-the-facebook-welcome-page-once-the-user-is-logged-in",
+        "keyword": "Scenario",
+        "name": "Verify the facebook welcome page once the user is logged in",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am logged onto facebook page",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/facebook_steps.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3892934000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should land on facebook welcome page",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/facebook_steps.rb:26"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Login failed. Try again! (RuntimeError)\n./features/step_definitions/facebook_steps.rb:31:in `/^I should land on facebook welcome page$/'\nfeatures/Feature_files/facebook.feature:12:in `I should land on facebook welcome page'",
+              "duration": 7636815000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@all",
+            "line": 1
+          },
+          {
+            "name": "@login_fail",
+            "line": 9
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/env.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2496049000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/env.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262401000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

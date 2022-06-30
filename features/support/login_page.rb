@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'cucumber'
 require 'watir'
 
 class LoginVar
@@ -16,12 +15,4 @@ class LoginVar
     $browser.button(name: 'login')
   end
 
-end
-
-Before do
-  $browser = Watir::Browser.new :chrome
-end
-
-After do
-  $browser.close
 end
